@@ -25,6 +25,6 @@ COPY ./UnrealTournament.ini /opt/ut-server/System/UnrealTournament.ini
 USER ut-server
 WORKDIR /opt/ut-server/System
 
-EXPOSE 5080 27500 27900 7777-7781/udp
+EXPOSE 5080 27900/udp 7777-7781/udp
 ENTRYPOINT ["/opt/ut-server/System/ucc-bin"]
 CMD ["server", "DM-Barricade?game=Botpack.DeathMatchPlus", "userini=User.ini", "ini=/opt/ut-server/System/UnrealTournament.ini", "--nohomedir"]
